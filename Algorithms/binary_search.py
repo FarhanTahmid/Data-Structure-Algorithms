@@ -3,6 +3,8 @@ def binary_search(lists,target):
     high_index=len(lists)-1
     low_index=0
     
+    lists.sort()
+    
     while low_index<=high_index:
         mid_index=low_index+(high_index-low_index)//2
         
@@ -20,4 +22,4 @@ size=int(input("Enter the size of the list: "))
 list1=[int(input("Enter the element: ")) for i in range(size)]
 target=int(input("Enter the target element: "))
 # caution! The list is sorted after you enter and will always print the index of the sorted array!
-print(binary_search(list1.sort(),target))
+print(binary_search(list1,target))
